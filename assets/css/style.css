@@ -190,6 +190,40 @@ section.block{padding:84px 0;}
 .broker-note h3{font-size:1.5rem;font-weight:800;text-transform:uppercase;margin-bottom:.4rem;}
 .broker-note p{color:#c3d2d6;margin:0;max-width:46ch;}
 
+/* detailed listing (real inventory) */
+.listing{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px;margin-bottom:26px;}
+.listing .info h3{font-size:1.6rem;font-weight:800;text-transform:uppercase;margin:.2rem 0 .5rem;}
+.listing .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+.listing .badge{font-family:"Spline Sans Mono";font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:2px;font-weight:600;}
+.listing .badge.drop{background:#7c2d12;color:#fff;}
+.listing .badge.finance{background:var(--gold-2);color:var(--hull);}
+.listing .badge.loc{background:var(--mist);color:var(--sea);}
+.listing .price{font-family:"Archivo";font-weight:900;font-size:2rem;color:var(--sea);line-height:1;margin-bottom:.6rem;}
+.listing .price small{font-family:"Public Sans";font-weight:600;font-size:.8rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;margin-left:6px;}
+.listing .desc{color:var(--ink-soft);font-size:1.02rem;margin-bottom:1rem;}
+.listing .feat-title{font-family:"Spline Sans Mono";font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);margin:0 0 .5rem;}
+.listing .feats{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;}
+.listing .feats li{position:relative;padding-left:18px;font-size:.95rem;color:var(--ink);}
+.listing .feats li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);}
+
+/* slideshow / carousel */
+.carousel{position:relative;border-radius:5px;overflow:hidden;background:var(--hull);aspect-ratio:4/3;}
+.carousel-track{position:absolute;inset:0;}
+.carousel-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s var(--ease);}
+.carousel-slide.active{opacity:1;}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;background:rgba(12,39,51,.55);color:#fff;font-size:1.4rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .15s;backdrop-filter:blur(2px);}
+.carousel-btn:hover{background:var(--gold);color:var(--hull);}
+.carousel-btn.prev{left:10px;}
+.carousel-btn.next{right:10px;}
+.carousel-dots{position:absolute;bottom:10px;left:0;right:0;display:flex;gap:7px;justify-content:center;}
+.carousel-dots button{width:8px;height:8px;padding:0;border-radius:50%;border:0;background:rgba(255,255,255,.5);cursor:pointer;transition:background .15s,transform .15s;}
+.carousel-dots button.active{background:var(--gold-2);transform:scale(1.25);}
+.carousel-count{position:absolute;top:10px;right:12px;font-family:"Spline Sans Mono";font-size:.66rem;letter-spacing:.1em;color:#fff;background:rgba(12,39,51,.55);padding:3px 8px;border-radius:2px;}
+@media(max-width:980px){
+  .listing{grid-template-columns:1fr;gap:22px;}
+  .listing .feats{grid-template-columns:1fr;}
+}
+
 /* photo placeholder — solid navy, no grid */
 .ph{
   position:relative;overflow:hidden;
