@@ -258,8 +258,12 @@ section.block{padding:84px 0;}
 .stat .n{font-family:"Archivo";font-weight:900;font-size:2.1rem;color:var(--gold-2);line-height:1;}
 .stat .l{font-family:"Spline Sans Mono";font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#9fb2b7;margin-top:6px;}
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px;}
-.value{background:#fff;border:1px solid var(--line);border-radius:4px;padding:26px;}
-.value h3{font-size:1.15rem;font-weight:800;margin-bottom:.5rem;}
+.value{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:28px;transition:transform .18s var(--ease),box-shadow .18s var(--ease);}
+.value:hover{transform:translateY(-3px);box-shadow:0 14px 32px -14px rgba(12,39,51,.28);}
+.value .ic{width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(168,156,46,.14);color:var(--sea);margin-bottom:16px;transition:background .18s,color .18s;}
+.value .ic svg{width:23px;height:23px;}
+.value:hover .ic{background:var(--gold);color:var(--hull);}
+.value h3{font-size:1.18rem;font-weight:800;margin-bottom:.5rem;}
 .value p{font-size:.96rem;color:var(--ink-soft);margin:0;}
 
 /* testimonials */
