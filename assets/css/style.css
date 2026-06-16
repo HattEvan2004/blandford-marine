@@ -261,10 +261,14 @@ section.block{padding:84px 0;}
 .value p{font-size:.96rem;color:var(--ink-soft);margin:0;}
 
 /* testimonials */
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start;}
 .quote{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:26px;}
+.quote .stars{color:var(--gold);letter-spacing:3px;font-size:1rem;margin-bottom:12px;}
 .quote p{font-size:1.02rem;color:var(--ink);font-style:italic;margin-bottom:1rem;}
-.quote .who{font-family:"Spline Sans Mono";font-size:.74rem;letter-spacing:.06em;color:var(--sea);text-transform:uppercase;}
+.quote .reviewer{display:flex;align-items:center;gap:11px;margin-top:16px;}
+.quote .reviewer .avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;}
+.quote .who{font-family:"Archivo";font-weight:700;font-size:.97rem;color:var(--ink);letter-spacing:0;text-transform:none;line-height:1.15;}
+.quote .src{font-family:"Spline Sans Mono";font-size:.64rem;letter-spacing:.04em;color:var(--ink-soft);margin-top:3px;}
 .placeholder-flag{font-family:"Spline Sans Mono";font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7c6a13;background:#efeac9;border:1px dashed var(--gold);border-radius:3px;padding:3px 8px;display:inline-block;margin-bottom:14px;}
 
 /* faq */
